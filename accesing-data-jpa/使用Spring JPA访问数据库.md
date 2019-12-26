@@ -10,11 +10,11 @@ public interface CustomerRepository extends CrudRepository<Customer, Long> {
 }
 ```
 ## 注解
-将当前的方法声明为Bean，并将它交由Spring IoC容器管理。
+表示该方法返回的对象是Bean对象，能被Spring IoC容器管理。
 ```java
 @Bean
-    public CommandLineRunner demo(CustomerRepository repository){
-        // 省略具体实现
-    }
+public CommandLineRunner demo(CustomerRepository repository){
+    // 省略具体实现
+}
 ```
 Bean对象能够通过ApplicationContext的getBean方法获取到。
